@@ -1,0 +1,966 @@
+* {
+    transition-timing-function: linear;
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body>.box {
+    transition: 1s;
+    width: 100%;
+    background: #fff;
+}
+
+header {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    translate: -50% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 73rem;
+    border-bottom: .1rem solid #a3a3a3;
+    height: 6.5rem;
+    z-index: 10;
+    background: #ffffffe2;
+    backdrop-filter: blur(.4rem);
+}
+
+header .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 73vw;
+    height: 50%;
+    gap: 1vw;
+}
+header .item:first-child i {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+header .item:first-child a i {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+    position: relative;
+}
+
+header .item:first-child nav {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+}
+
+header .item:first-child nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: .3vw 4vw;
+}
+
+header .del {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 4vw;
+}
+
+header .item:first-child nav ul li {
+    cursor: pointer;
+    font: .9rem system-ui;
+    color: #444;
+    width: max-content;
+}
+
+header .item:nth-child(2) h2 {
+    font: 1.5rem system-ui;
+}
+
+header .item:nth-child(2) .cont {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: max-content;
+}
+
+header .item:nth-child(2) .cont a {
+    font: .85rem system-ui;
+    text-decoration: none;
+    color: #444;
+    width: max-content;
+}
+
+header .item:nth-child(2) .cont a:first-child {
+    color: #a3a3a3;
+}
+
+header .item:nth-child(2) .cont button {
+    background: #0071E3;
+    color: #fff;
+    width: 3rem;
+    height: 1.7rem;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font: .9rem system-ui;
+}
+
+.Heading {
+    width: 100%;
+    height: 56rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0rem 0 0 0; */
+}
+
+.Heading h1 {
+    font: bold 12rem system-ui;
+    background: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+    -webkit-background-clip: text;
+    color: transparent;
+    translate: 0 20%;
+}
+
+.Welcome {
+    width: 100%;
+    height: 168rem;
+    transform-style: preserve-3d;
+}
+
+.Welcome .sticky-div {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    transform-style: preserve-3d;
+}
+
+.Welcome .sticky-div :is(.FirstSide, .SecondSide) {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transform-style: preserve-3d;
+    z-index: 19 !important;
+}
+
+.Welcome .sticky-div img {
+    position: relative;
+    width: 65rem;
+    z-index: 19 !important;
+    bottom: -50rem;
+    transform: translateZ(20rem);
+    transform-style: preserve-3d;
+}
+
+.Welcome .sticky-div :is(.FirstSide, .SecondSide) :is(h3, p) {
+    position: absolute;
+    z-index: 10;
+    translate: -50% -50%;
+    overflow: visible !important;
+}
+
+.Welcome .sticky-div .FirstSide h3 {
+    color: #000;
+    transform-style: preserve-3d;
+    /* top: 27.5%; */
+    top: 45%;
+    left: 79%;
+    translate: -50% -50%;
+    font: bold 8rem system-ui;
+    transform: rotateY(-57deg) rotateX(23deg);
+    z-index: 2;
+    rotate: -20deg;
+    scale: .15;
+}
+
+.Welcome .sticky-div .SecondSide h3 {
+    color: #000;
+    transform-style: preserve-3d;
+    /* top: 20%; */
+    top: 40%;
+    left: 20%;
+    translate: -50% -50%;
+    font: bold 8rem system-ui;
+    transform: rotateY(-57deg) rotateX(-23deg);
+    z-index: 2;
+    rotate: 15deg;
+    scale: .15;
+    width: max-content;
+}
+
+.Welcome .sticky-div .FirstSide p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 80%;
+    transform: rotateY(-35deg) rotateX(17deg);
+    rotate: -10deg;
+    font: 2.5rem system-ui;
+    width: max-content;
+}
+
+.Welcome .sticky-div .FirstSide p span {
+    font: bold 5.5rem system-ui;
+}
+
+.Welcome .sticky-div .SecondSide p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    right: 50%;
+    transform: rotateY(-35deg) rotateX(-23deg);
+    rotate: 15deg;
+    font: 2.25rem system-ui;
+    width: max-content;
+}
+
+.Welcome .sticky-div .SecondSide p span {
+    font: bold 5.5rem system-ui;
+}
+
+.Welcome .sticky-div .CentralSide {
+    overflow: visible !important;
+    transform-style: preserve-3d;
+    position: absolute;
+    translate: -50% -50%;
+    left: 50%;
+    top: 55%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    z-index: 4;
+    opacity: 0;
+    scale: 0;
+    width: max-content;
+    transform: perspective(40rem);
+}
+
+.Welcome .sticky-div .CentralSide .Battery {
+    width: 12rem;
+    height: 5.5rem;
+    border: .6rem solid #00D959;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: .33rem;
+}
+
+.Welcome .sticky-div .CentralSide .Battery::after {
+    content: '';
+    position: absolute;
+    translate: -50% 0;
+    left: 69%;
+    width: .9rem;
+    height: 1.7rem;
+    border-radius: 0 50px 50px 0;
+    background: #00D959;
+}
+
+.Welcome .sticky-div .CentralSide .Battery .Filler {
+    width: 0%;
+    height: 100%;
+    background: #00D959;
+    border-radius: 13px;
+}
+
+.Welcome .sticky-div .CentralSide p {
+    font: bold 6.5rem system-ui;
+    line-height: 7rem;
+}
+
+.LadyPhoto {
+    height: 112rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    text-align: center;
+    gap: 1rem;
+}
+
+.LadyPhoto h2 {
+    font: bold 8rem system-ui;
+    scale: 1.3;
+    transform: perspective(40rem) rotateX(35deg);
+    translate: 0 25%;
+    position: relative;
+    z-index: 2;
+}
+
+.LadyPhoto img {
+    width: 100%;
+    position: relative;
+    left: 19%;
+    top: 30%;
+    z-index: 1;
+}
+
+.IphonesMeans {
+    height: 67rem;
+    text-align: center;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.IphonesMeans p {
+    background: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+    -webkit-background-clip: text;
+    color: transparent;
+    font: bolder 2.7rem system-ui;
+    opacity: 0;
+}
+
+.IphonesMeans h2 {
+    position: relative;
+    transform: perspective(12rem) rotateX(-45deg);
+    font: bold 6rem system-ui;
+    translate: 0 5%;
+    scale: 1;
+    z-index: 2;
+}
+
+.IphonesMeans .Pictures {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 125%;
+    padding-top: 2rem;
+    height: 52rem;
+}
+
+.IphonesMeans .Pictures img {
+    position: relative;
+    left: 0;
+    top: 50%;
+    z-index: 3;
+}
+
+.SliderParent {
+    width: 100%;
+    height: 90rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    transform-style: preserve-3d;
+}
+
+.SliderParent .box {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 70rem;
+    gap: 1rem;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.SliderParent .box .PartOne {
+    width: 100%;
+    display: flex;
+    height: 68%;
+    gap: 1rem;
+}
+
+.SliderParent .box .PartTwo {
+    width: 100%;
+    display: flex;
+    height: 32%;
+    gap: 1rem;
+}
+
+.SliderParent .box .PartOne .List {
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.SliderParent .box .PartOne .List .item {
+    width: 100%;
+    height: var(--hai);
+    border-radius: 15px;
+}
+
+.SliderParent .box .PartTwo .item {
+    height: 100%;
+    width: var(--twhai);
+    border-radius: 15px;
+}
+
+.SliderParent .box .item {
+    background: #F5F5F7;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-evenly;
+    translate: 0 20rem;
+}
+
+.SliderParent .box .item .big {
+    width: 500%;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: 1s ease-in;
+}
+
+.SliderParent .box .item .big img {
+    width: calc(100% / 5);
+    background: #000;
+}
+
+.SliderParent .box p {
+    color: #787878;
+    font-weight: 550;
+}
+
+.SliderParent .PartOne .List:first-child .item:first-child {
+    text-align: center;
+    padding: .2rem;
+    font-size: 1.4rem;
+}
+
+.SliderParent .PartOne .List:first-child .item:first-child .cont {
+    justify-content: center;
+}
+
+.SliderParent .PartOne .List:first-child .item:first-child .cont img {
+    width: 94%;
+    justify-content: center;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:first-child {
+    justify-content: end;
+    padding-left: 8%;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:first-child .text {
+    position: absolute;
+    translate: 0 -50%;
+    top: 50%;
+    right: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+    z-index: 2;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:first-child .text h2 {
+    font: 700 3rem system-ui;
+    line-height: 3.2rem;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:first-child .text p,
+.SliderParent .PartTwo .item:nth-child(1) p {
+    font: 550 1.5rem system-ui;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:first-child img {
+    width: 20%;
+    transition: .5s;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .cont {
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding-left: 1.5%;
+    position: relative;
+    z-index: 1;
+}
+
+.SliderParent .item .cont {
+    width: calc(100% / 5);
+    height: 100%;
+    display: flex;
+}
+
+.SliderParent .PartOne .List:nth-child(3) .item:first-child {
+    justify-content: end;
+    align-items: center;
+}
+
+.SliderParent .PartOne .List:nth-child(3) .item:first-child img {
+    width: 70%;
+    transition: .5s;
+}
+
+.SliderParent .PartOne .List:nth-child(3) .item:nth-child(2) img {
+    width: 150%;
+    position: relative;
+    top: 14%;
+    left: 13%;
+    transition: .5s;
+}
+
+.SliderParent .PartTwo .item:nth-child(1) {
+    text-align: center;
+    align-items: center;
+}
+
+.SliderParent .PartTwo .item:nth-child(1) .cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SliderParent .PartTwo .item:nth-child(1) img {
+    width: 80%;
+    transition: .5s;
+    opacity: 1;
+}
+
+.SliderParent .PartTwo .item:nth-child(2) {
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.SliderParent .PartTwo .item:nth-child(2) img {
+    width: 75%;
+    transition: .5s;
+}
+
+.SliderParent .PartTwo .item:nth-child(2) .context {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.SliderParent .PartTwo .item:nth-child(2) .context h2 {
+    font: bold 2.5rem system-ui;
+}
+
+.SliderParent .PartTwo .item:nth-child(2) .context p {
+    font: 550 1.6rem system-ui;
+    line-height: 1.6rem;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:nth-child(2) p {
+    font: 550 1.45rem system-ui;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:nth-child(2) h2 {
+    font: bold 3.5rem system-ui;
+    transform: perspective(40rem) rotateY(0);
+    transition: 1s;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:nth-child(2) .Radios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:nth-child(2) .Radios input {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--co);
+    box-shadow: 0px 0px 2px #000 inset;
+    position: relative;
+    cursor: pointer;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:nth-child(2) .Radios input::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 49.5%;
+    width: 115%;
+    height: 115%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    border: .15rem solid #000;
+    opacity: 0;
+    transition: .15s;
+}
+
+.SliderParent .PartOne .List:nth-child(2) .item:nth-child(2) .Radios input:checked:after {
+    opacity: 1;
+}
+
+.HardSlider {
+    width: 100%;
+    height: 76rem;
+    position: relative;
+    display: flex;
+    background: #F5F5F7;
+    transform-style: preserve-3d;
+}
+
+.HardSlider :is(.text, .PhonesSlider) {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.HardSlider .text {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 13vw;
+}
+
+.HardSlider .text span {
+    font: bold 5.7rem system-ui;
+    background: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+    -webkit-background-clip: text;
+    color: transparent;
+    width: max-content;
+}
+
+.HardSlider .text p,
+.Detector .item p,
+.Detector .item h3 {
+    font: bold 1.9rem system-ui;
+    color: #787878;
+    width: max-content;
+    letter-spacing: .05rem;
+    translate: 0 20%;
+}
+
+.HardSlider .PhonesSlider {
+    display: flex;
+    overflow: hidden;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+.HardSlider .PhonesSlider .item {
+    position: absolute;
+    width: 26rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: calc(26.5rem * var(--loc) + 10rem);
+    transition: .35s cubic-bezier(.4, .13, 1, .99);
+}
+
+.HardSlider .PhonesSlider .item img {
+    width: 100%;
+}
+
+.HardSlider .Controls {
+    position: absolute;
+    translate: -50% -50%;
+    bottom: 2rem;
+    right: 18.5rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 3;
+}
+
+.HardSlider .Controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 9%;
+    font-size: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    color: #000;
+    cursor: pointer;
+    background: #dbdbdb;
+    transition: .25s;
+}
+
+.HardSlider .Controls button:disabled {
+    cursor: default;
+    opacity: .4;
+}
+
+.HardSlider .ScrollText {
+    position: relative;
+    top: 10rem;
+    opacity: 0;
+}
+
+.Easieast {
+    width: 100%;
+    height: 63rem;
+    background: url(img/HelpWallPaper.jpg) no-repeat center / cover;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding-top: 25%;
+}
+
+.Easieast h2 {
+    font: bold 6rem system-ui;
+    line-height: 6rem;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    opacity: 0;
+}
+
+.Detector {
+    width: 100%;
+    height: 85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Detector .item {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20rem;
+}
+
+.Detector .item:nth-child(2) {
+    align-items: start;
+}
+
+.Detector .item img {
+    width: 60%;
+}
+
+.Detector .item .box {
+    position: relative;
+    cursor: pointer;
+    left: 20%;
+    width: 5rem;
+    height: 6rem;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+}
+
+.Detector .item p {
+    text-align: start;
+    width: 100%;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    opacity: 0;
+    translate: 0 5rem;
+}
+
+.Detector .item h3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #000;
+    line-height: 2rem;
+}
+
+.Detector .item button {
+    position: absolute;
+    translate: 0 -50%;
+    top: 50%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2.25rem;
+    background: #0071E3;
+    box-shadow: 0 0 30px 35px #fff;
+    color: #fff;
+    background: linear-gradient(45deg, #70d1f0, #6BA5F2, #8f75fc);
+    cursor: pointer;
+}
+
+.RightOne {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    transition: 1s;
+}
+
+.RightOne::-webkit-scrollbar {
+    display: none;
+}
+
+.RightOne .all {
+    width: 200rem;
+    height: 300vh;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    position: absolute;
+}
+
+.RightOne .block {
+    position: sticky;
+    top: 0;
+    width: 200rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.place-for-tc {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 7rem;
+    background: #F5F5F7;
+}
+
+.place-for-tc .cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.place-for-tc .cont .part {
+    width: calc(100% / 3);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem 0 0 1rem;
+    position: relative;
+}
+
+.place-for-tc h2 {
+    font: 500 1.2rem system-ui;
+    color: #000;
+}
+
+.place-for-tc p {
+    font: 1rem system-ui;
+    color: #000;
+}
+
+.RightOne .PartOf {
+    width: 69%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.RightOne .PartOf.one {
+    font: bold 4rem system-ui;
+    padding-left: 2.5%;
+    line-height: 4.9rem;
+}
+
+.RightOne .PartOf.two {
+    padding-left: 4%;
+}
+
+.RightOne .PartOf.two h3 {
+    font: bold 3.8rem system-ui;
+    padding-left: 2.5%;
+    line-height: 4rem;
+    background: linear-gradient(#2EA2B6, #5D7AF4, #F24E83);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.RightOne .all .undo-r {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(45deg, #70d1f0, #6BA5F2, #8f75fc);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    transition: rotate .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.RightOne .all .undo-r:hover {
+    rotate: 180deg;
+}
+
+.RightOne .all .controls-of-r {
+    position: sticky;
+    left: 1rem;
+    top: 88.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 1920 !important;
+}
+
+.RightOne .all .controls-of-r .lineof {
+    width: 12rem;
+    background: #dbdbdb;
+    color: #a3a3a3;
+    height: .5rem;
+    border-radius: 50px;
+}
